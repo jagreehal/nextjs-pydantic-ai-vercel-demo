@@ -1,0 +1,64 @@
+[project]
+name = "ollama-langchain-pg-vector-demo"
+version = "1.0.0"
+description = "A project to demonstrate how to use pg_vector with langchain"
+authors = [
+    {name = "Jag Reehal", email = "jag@jagreehal.com"},
+]
+
+requires-python = ">=3.12"
+readme = "README.md"
+license = {file = "LICENSE"}
+
+[build-system]
+requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "C",  # flake8-comprehensions
+    "B",  # flake8-bugbear
+    "N",  # flake8-broken-line
+]
+ignore = [
+    "E501",  # line too long, handled by black
+    "B008",  # do not perform function calls in argument defaults
+    "C901",  # too complex
+    "F401",  # module imported but unused
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["python_template"]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--cov=src --cov-report=html -ra -q"
+testpaths = [
+    "src",
+]
+
+[tool.mypy]
+plugins = ["pydantic.mypy"]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+
+[tool.pydantic-mypy]
+init_forbid_extra = true
+init_typed = true
+warn_required_dynamic_aliases = true

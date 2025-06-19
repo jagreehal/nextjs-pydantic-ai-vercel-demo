@@ -1,0 +1,9 @@
+### Example request to translate text using the AI service
+
+POST http://localhost:5003/api/ai/translate
+Content-Type: application/json
+
+{
+  "to_language": "French",
+  "text": "Hello, World!"
+}
