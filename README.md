@@ -1,14 +1,12 @@
 # ✨ One Deployment, Two Powers: Next.js Meets Python AI
 
-Most modern AI apps hit the same wall:
+In AI development, many teams choose either one tech stack, Python or JavaScript. But with so much innovation happening in both ecosystems, why not take advantage of the best of both?
 
-Frontend in JavaScript. Backend in Python. Multiple repositories. CORS nightmares. Deployment spaghetti.
+Even when providers make SDKs available in both languages, it's often the case that they don't have feature parity, with features implemented and more feature-rich in the Python ecosystem.
 
-It's not about picking sides.
+What if you could use the latest frameworks and libraries to build best-in-class applications? Could we use PydanticAI and Next.js in the same repository with a single deployment?
 
-It's not about "Python vs JavaScript".
-
-It's about using both in one seamless deployment.
+I've open-sourced a project that demonstrates exactly this: shipping a Next.js frontend and Python AI backend together in one codebase, one deployment, without the complexity of microservices.
 
 🔁 This project shows how you can ship a Next.js frontend and a Python AI backend together in one codebase, one deploy, no microservices, no CORS config.
 
